@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>repl.it</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    <h1> Riddle fun</h1>
+
+     <p>Let's play a game, you will get two riddles and you must solve and enter the two answers below in the text boxes and then click the check results button to view your results (<b> SPELLING MISTAKES WILL COUNT AS AN ERROR PLEASE DON'T MAKE SPELLING MISTAKES</B>)  for the <b>first</b> riddle the answer is hidden in the words written under the buttons if you're able to find it that is... or if you recognize this riddle then... lucky you I guess. If you are not able to find the asnwer using the words below don't get fusturated just click the button which says <b>extra hint</b> which will give you a hint. Since I don't want to make the game too easy I <b>won't</b> be giving you a clue or hint for the <b>second</b> riddle you must find that one on you're own. </p>
+    
+    <h3> How it works</h3>
+    
+    <p> If you get both answers correct you get 100/100 if you get both wrong or chose to not guess both then you get 0/100 and if you get one right and chose to write nothing for the other or get the other wrong well... I regret to inform you but this is an all or nothing situation you either get 100/100 or 0/100 so if you put one wrong answer or one blank then I am afraid it will be a 0/100</p>
+    
+    <br>
+    
+    <b> Your first riddle:</b><p> David's father has three sons: Snap, Crackle, and _____? </p>
+    
+    <b> Your second ridddle:</b><p> What has a head, a tail, is brown, and has no legs </p> 
+    
+    
+     <b> (if answer is in words write in lower case)</b>
+     
+     <br>
+     <br>
+    
+    riddle1: <input type="my-text" id="my-text">
+     
+    riddle2: <input type="my-text" id="my-text2">
+    
+    <br>
+    
+    <br>
+    <br>
+    
+    <button id="my-btn"> check results</button>
+    <button id="my-btn2"> extra hint</button>
+    <br>
+    <br>
+    
+    <p> you're words's</p>
+  
+  <p id="demo"></p>
+  
+  <script>  
+  let hint = ["die", "ate", "vet", "ink", "dear"];
+  let i = 0;
+  let text = "";
+  while (hint[i]) {
+  text += hint[i] + "<p>";
+  i++;
+}
+document.getElementById("demo").innerHTML = text;
+</script>
+
+<script>
+document.getElementById("my-btn2").addEventListener("click", function() {
+  alert('Your clue: its in the riddle')
+})
+</script>
+
+    <script src="script.js"></script>
+  </body>
+</html>
